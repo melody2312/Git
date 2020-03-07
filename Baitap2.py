@@ -1,0 +1,1 @@
+print("Nguyen Tuan Anh, 155D5202160096, Ky thuat dieu khien va Tu dong hoa")
