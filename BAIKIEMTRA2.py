@@ -1,0 +1,28 @@
+from tkinter import *
+def newfile():
+    lbl = Label(root,text="Tao File")
+    lbl.grid(column=2,row=3)
+def About():
+    print("This is a simple example of te menu")
+def openfile():
+    window=Tk()
+    window.title('hello :)')
+    window.geometry('800x600')
+    btn=Button(window,text="Open",bg="blue")
+    btn.grid(column=1,row=4)
+    lbl=Label(window,text="OPEN FILE")
+    lbl.grid(column=1,row=0)
+    mainloop()
+root=Tk()
+menu=Menu(root)
+root.geometry('800x600')
+root.config(menu=menu)
+filemenu=Menu(menu)
+menu.add_cascade(label="file",menu=filemenu)
+filemenu.add_command(label='New',command=newfile)
+filemenu.add_command(label='Open',command=openfile)
+filemenu.add_command(label='Exit',command=exit)
+helpmenu=Menu(menu)
+menu.add_cascade(label="wiew",menu=helpmenu)
+helpmenu.add_command(label="About=...",command=About)
+mainloop()
